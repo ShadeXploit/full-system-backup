@@ -27,8 +27,12 @@ chmod +x backup_script.sh
 After reinstalling Arch, run this script to restore everything:
 
 ```bash
-#!/bin/bash
-not done yet
+cd ~
+sudo pacman -S git pv
+git clone https://github.com/ShadeXploit/full-system-backup.git
+cd full-system-backup/
+chmod +x restore_script.sh
+./restore_script.sh
 ```
 
 ## 🛠️ Notes
