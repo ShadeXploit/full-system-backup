@@ -24,7 +24,7 @@ chmod +x backup_script.sh
 
 ### **Restore After a Fresh Install**
 
-After reinstalling Arch, run this script to restore everything:
+After reinstalling Arch, move your backup folder "/arch-backup" into your (~) directory and run this script to restore everything:
 
 ```bash
 cd ~
