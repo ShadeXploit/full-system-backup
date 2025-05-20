@@ -15,7 +15,7 @@ Run the following script before reinstalling Arch to **save everything** in your
 
 ```bash
 cd ~
-sudo pacman -S git
+sudo pacman -S git pv
 git clone https://github.com/ShadeXploit/full-system-backup.git
 cd full-system-backup/
 chmod +x backup_script.sh
