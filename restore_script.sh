@@ -12,4 +12,6 @@ sudo pacman -S - < "$BACKUP_DIR/packages.txt"
 echo "Restoring home directory..."
 pv "$BACKUP_DIR/home_full_backup.tar.gz" | tar xpf - -C /
 
+rm -rf ~/full-system-backup
+
 echo "Restoration complete! Restart your session for changes to apply."
