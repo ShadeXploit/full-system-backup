@@ -14,8 +14,12 @@ A simple set of scripts to **backup and restore** your Arch Linux setup after a 
 Run the following script before reinstalling Arch to **save everything** in your home folder:
 
 ```bash
-#!/bin/bash
-not done yet
+cd ~
+sudo pacman -S git
+git clone https://github.com/ShadeXploit/full-system-backup.git
+cd full-system-backup/
+chmod +x backup_script.sh
+./backup_script.sh
 ```
 
 ### **Restore After a Fresh Install**
