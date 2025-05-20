@@ -8,6 +8,15 @@ echo "Backing up installed packages..."
 pacman -Qq > "$BACKUP_DIR/packages.txt"
 
 echo "Archiving entire home directory..."
-tar czpvf "$BACKUP_DIR/home_full_backup.tar.gz" "$HOME" --exclude="$HOME/arch_backup"
+tar cf - "$HOME" --exclude="$HOME/arch_backup" | pv -s $(du -sb "$HOME" | awk '{print $1}') > "$BACKUP_DIR/home_full_backup.tar.gz"
 
 echo "Backup completed. Store '$BACKUP_DIR' safely!"
+
+
+
+
+
+
+
+
+# tar czpvf "$BACKUP_DIR/home_full_backup.tar.gz" "$HOME" --exclude="$HOME/arch_backup"
