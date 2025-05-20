@@ -11,6 +11,7 @@ echo "Archiving entire home directory..."
 tar cf - "$HOME" --exclude="$HOME/arch_backup" | pv -s $(du -sb "$HOME" | awk '{print $1}') > "$BACKUP_DIR/home_full_backup.tar.gz"
 
 rm -rf ~/full-system-backup
+cd ~
 
 echo "Backup completed. Store '$BACKUP_DIR' safely!"
 
